@@ -29,14 +29,9 @@ export default function Chat() {
       }
 
       const res = await axios.post(
-        "http://localhost:5000/api/agent/run",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      );
+  "https://ai-agent-backend-uqzj.onrender.com/api/agent/run",
+  formData
+);
 
       const botMsg = { role: "bot", text: res.data.result };
 
